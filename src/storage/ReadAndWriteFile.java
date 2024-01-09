@@ -1,5 +1,3 @@
 package storage;
-
-public class ReadAndWriteFile {
-    public
+public class ReadAndWriteFile{
 }
