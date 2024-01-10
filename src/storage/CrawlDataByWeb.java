@@ -59,7 +59,7 @@ public class CrawlDataByWeb implements ICrawlData{
     public List<Phone> crawData2(){
         List<Phone> list = new ArrayList<>();
         try{
-            URL url = new URL("https://xoanstore.vn/iphone");
+            URL url = new URL("https://xoanstore.vn/iphone?q=collections:2542854&page=5&view=grid");
             Scanner sc = new Scanner(new InputStreamReader(url.openStream()));
             sc.useDelimiter("\\Z");
             String content = sc.next();
