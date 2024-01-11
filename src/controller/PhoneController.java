@@ -20,4 +20,16 @@ public class PhoneController {
         }
         return result;
     }
+    public static int findMinPrice(ArrayList<String> arr){
+        for (int i=0;i< arr.size();i++){
+            arr.set(i,arr.get(i).replaceAll("\\p{Punct}",""));
+        }
+        int min = Integer.parseInt(arr.get(0));
+        for (int i = 0; i < arr.size(); i++) {
+            if (min > Integer.parseInt(arr.get(i))){
+                min = Integer.parseInt(arr.get(i));
+            }
+        }
+        return min;
+    }
 }

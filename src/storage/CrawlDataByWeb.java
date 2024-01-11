@@ -46,7 +46,8 @@ public class CrawlDataByWeb implements ICrawlData{
                 String name2 = name.trim();
                 String price = priceMatcher.group(1);
                 price.trim();
-                list.add(new Phone(name2,price));
+                String[] temp = price.split("đ");
+                list.add(new Phone(name2,temp[0]));
             }
 
         } catch (MalformedURLException e) {
@@ -74,8 +75,8 @@ public class CrawlDataByWeb implements ICrawlData{
                 name.trim();
                 String price = priceMatcher.group(2);
                 price.trim();
-//                String[] temp = price.split("₫");
-                list.add(new Phone(name,price));
+                String[] temp = price.split("₫");
+                list.add(new Phone(name,temp[0]));
             }
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
